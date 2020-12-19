@@ -2,3 +2,8 @@ button, button:focus {
     outline: none !important;
     box-shadow: none !important;
 }
+
+a, a:hover{
+    text-decoration: none;
+    cursor: pointer;
+}
