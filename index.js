@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    console.log("wah gwan")
   $('#top-sale .owl-carousel').owlCarousel({
     loop: true,
     margin: 10,
@@ -16,4 +15,14 @@ $(document).ready(function() {
       },
     },
   })
+
+  var $grid = $('.grid').isotope({
+    itemSelector: '.grid-item',
+    layoutMode: 'fitRows'
+  })
+
+  $('.button-group').on( 'click', 'button', function() {
+    var filterValue = $(this).attr('data-filter');
+    $grid.isotope({ filter: filterValue });
+  });
 })
